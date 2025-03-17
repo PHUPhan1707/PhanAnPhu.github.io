@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phan An Phu - CV</title>
+  <meta name="description" content="Junior Frontend Developer với kinh nghiệm về HTML, CSS, JavaScript và giảng dạy.">
+  <meta name="author" content="Phan An Phu">
+  <meta name="keywords" content="Frontend Developer, HTML, CSS, JavaScript, Teaching, Robotics">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Phan An Phu - CV">
+  <meta property="og:description" content="Junior Frontend Developer với kinh nghiệm về HTML, CSS, JavaScript và giảng dạy.">
+  <meta property="og:image" content="assets/avatar.png">
+  <meta property="og:url" content="https://your-website.com/cv">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://img.icons8.com/?size=100&id=23877&format=png&color=000000" type="image/x-icon">
+
+  <!-- CSS Styles -->
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #ece9e6, #ffffff);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      background: #2a956a;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 80px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2 {
+      color: #2a956a;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    .section {
+      display: none; /* Mặc định ẩn tất cả */
+      padding: 60px 0;
+      min-height: 80vh;
+    }
+
+    .active {
+      display: block; /* Chỉ hiển thị phần active */
+    }
+
+    .avatar {
+      display: block;
+      width: 120px;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+
+    .info {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .skills {
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #2a956a;
+      color: white;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#" onclick="showSection('about')">About</a>
+  <a href="#" onclick="showSection('skills')">Skills</a>
+  <a href="#" onclick="showSection('education')">Education</a>
+  <a href="#" onclick="showSection('experience')">Experience</a>
+</nav>
+
+<div class="container">
+  <section id="about" class="section active">
+    <img src="https://th.bing.com/th/id/R.76f027c1d8ea2170cedd976017330331?rik=B5UgX3HyUA619Q&pid=ImgRaw&r=0" alt="Avatar" class="avatar">
+    <div class="info">
+      <h1 class="name">Phan An Phu</h1>
+      <h2>Junior Frontend Developer</h2>
+      <ul>
+        <li>📍 33, Bến Lức, Long An</li>
+        <li>📞 0932767810</li>
+        <li>📧 book1707@gmail.com</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <h2>Kỹ năng</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li>Figma để thiết kế, Ứng dụng Web Responsive</li>
+      <li>PHP, ReactJS, Node.js</li>
+    </ul>
+  </section>
+
+  <section id="education" class="section">
+    <h2>Học vấn</h2>
+    <h3>Đại học Quốc tế - Chuyên ngành Công nghệ Thông tin</h3>
+    <p>Bằng Cử nhân Khoa học Máy tính | 2021 - 2025</p>
+  </section>
+
+  <section id="experience" class="section">
+    <h2>Kinh nghiệm</h2>
+
+    <h3>Company A, HCM - IT Helpdesk</h3>
+    <p>Tháng 1/2024 - Tháng 3/2024</p>
+    <ul>
+      <li>Kiến thức CCNA</li>
+      <li>Hỗ trợ IT</li>
+      <li>Môi trường làm việc IT</li>
+    </ul>
+
+    <h3>VNPT, Bình Dương - Kỹ sư Web</h3>
+    <p>Tháng 7/2024 - Tháng 10/2024</p>
+    <ul>
+      <li>Kiến thức về công nghệ viễn thông</li>
+      <li>Hỗ trợ hệ thống viễn thông</li>
+      <li>Môi trường làm việc viễn thông</li>
+    </ul>
+  </section>
+
+  <p class="internet">GitHub: <a href="https://github.com/PHUPhan1707" target="_blank">PHUPhan1707</a></p>
+</div>
+
+<footer>
+  <p>&copy; 2025 Phan An Phu. All rights reserved.</p>
+</footer>
+
+<!-- JavaScript để ẩn/hiện phần -->
+<script>
+  function showSection(sectionId) {
+    // Ẩn tất cả các phần
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => section.classList.remove('active'));
+
+    // Hiện phần được chọn
+    document.getElementById(sectionId).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
